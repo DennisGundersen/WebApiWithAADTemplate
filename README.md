@@ -9,9 +9,10 @@
 5. Sample should use IDownstreamApi (not IDownstreamWebApi, which is used in all of Microsofts examples, but which is also deprecated)
 6. Sample code should be as standardized as possible for flexibility/reuseability (feel free to ignore any eccentricities in my code, I'm not a programmer), so no external frameworks 
 
-### Information:
-1. The MVC app has most of the code already setup, but as I updated from the deprecated IDownstreamWebApi to IDownstreamApi, it no longer maintains the tokens correctly (must log out and re-login on restart of app)
+### Status:
+1. The MVC app and Web Api has most of the code already setup, but as I updated from the deprecated IDownstreamWebApi to IDownstreamApi, it no longer maintains the tokens correctly (must log out and re-login on restart of app)
 2. Also some error crept in about JSON token, so the sample no longer runs
-3. Database can be auto created from the SSDT project (set to local MS SQL instance installed with Visual Studio), just publish it
-4. DAL uses Dapper and calls stored procedures included in the SSDT project 
-5. Database uses added schema "dbo.pragmatic" for flexibility/reuseability
+3. A sample ValuesModel (Id + Name) is used, and is sufficient for all clients. Additional entities can be ignored.
+4. Database can be auto created from the SSDT project (set to local MS SQL instance installed with Visual Studio), just publish it
+5. DAL uses Dapper and calls stored procedures included in the SSDT project 
+6. Database uses added schema "dbo.pragmatic" for flexibility/reuseability
