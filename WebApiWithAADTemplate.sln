@@ -13,6 +13,10 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Pragmatic.Tools.SSDT", "Pra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pragmatic.Common.Entities", "Pragmatic.Common.Entities\Pragmatic.Common.Entities.csproj", "{A209170B-8539-4503-B082-13A716CF7EAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pragmatic.Client.Console", "Pragmatic.Client.Console\Pragmatic.Client.Console.csproj", "{3CED249B-0F72-467A-92FB-DF3D4BE5E38A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pragmatic.Client.BlazorServer", "Pragmatic.Client.BlazorServer\Pragmatic.Client.BlazorServer.csproj", "{C04DF93D-EA23-4D7F-B322-1572ED050FC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,14 @@ Global
 		{A209170B-8539-4503-B082-13A716CF7EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A209170B-8539-4503-B082-13A716CF7EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A209170B-8539-4503-B082-13A716CF7EAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CED249B-0F72-467A-92FB-DF3D4BE5E38A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CED249B-0F72-467A-92FB-DF3D4BE5E38A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CED249B-0F72-467A-92FB-DF3D4BE5E38A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CED249B-0F72-467A-92FB-DF3D4BE5E38A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C04DF93D-EA23-4D7F-B322-1572ED050FC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C04DF93D-EA23-4D7F-B322-1572ED050FC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C04DF93D-EA23-4D7F-B322-1572ED050FC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C04DF93D-EA23-4D7F-B322-1572ED050FC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

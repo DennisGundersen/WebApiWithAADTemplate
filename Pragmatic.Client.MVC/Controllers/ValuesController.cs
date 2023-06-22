@@ -34,10 +34,10 @@ namespace Pragmatic.Client.MVC.Controllers
             try
             {
                 var apiResult = await _downstreamApi.GetForUserAsync<List<ValueModel>>("DownstreamApi", options =>
-                {
-                    options.BaseUrl = _apiOptions.BaseAddress;
-                    options.RelativePath = "values";
-                });
+                                                                                                            {
+                                                                                                                options.BaseUrl = _apiOptions.BaseAddress;
+                                                                                                                options.RelativePath = "values";
+                                                                                                            });
 
                 return View(apiResult);
             }
@@ -54,12 +54,11 @@ namespace Pragmatic.Client.MVC.Controllers
         {
             try
             {
-                var apiResult = new ValueModel();
-                apiResult = await _downstreamApi.GetForUserAsync<ValueModel>("DownstreamApi", options =>
-                {
-                    options.BaseUrl = _apiOptions.BaseAddress;
-                    options.RelativePath = $"values/{id}";
-                });
+                var apiResult = await _downstreamApi.GetForUserAsync<ValueModel>("DownstreamApi", options =>
+                                                                                                    {
+                                                                                                        options.BaseUrl = _apiOptions.BaseAddress;
+                                                                                                        options.RelativePath = $"values/{id}";
+                                                                                                    });
                 return View(apiResult);
             }
             catch (Exception ex)
@@ -87,10 +86,10 @@ namespace Pragmatic.Client.MVC.Controllers
             try
             {
                 var response = await _downstreamApi.PostForUserAsync<ValueModel, ValueModel>("DownstreamApi", model, options =>
-                {
-                    options.BaseUrl = _apiOptions.BaseAddress;
-                    options.RelativePath = "values";
-                });
+                                                                                                                        {
+                                                                                                                            options.BaseUrl = _apiOptions.BaseAddress;
+                                                                                                                            options.RelativePath = "values";
+                                                                                                                        });
 
                 if (response != null)
                 {
@@ -114,10 +113,10 @@ namespace Pragmatic.Client.MVC.Controllers
             try
             {
                 var apiResult = await _downstreamApi.GetForUserAsync<ValueModel>("DownstreamApi", options =>
-                {
-                    options.BaseUrl = _apiOptions.BaseAddress;
-                    options.RelativePath = $"values/{id}";
-                });
+                                                                                                    {
+                                                                                                        options.BaseUrl = _apiOptions.BaseAddress;
+                                                                                                        options.RelativePath = $"values/{id}";
+                                                                                                    });
                 return View(apiResult);
             }
             catch (Exception ex)
@@ -137,11 +136,11 @@ namespace Pragmatic.Client.MVC.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var result = _downstreamApi.PutForUserAsync<ValueModel>("DownstreamApi", model, options =>
-                    {
-                        options.BaseUrl = _apiOptions.BaseAddress;
-                        options.RelativePath = $"values/{model.Id}";
-                    });
+                    await _downstreamApi.PutForUserAsync("DownstreamApi", model, options =>
+                                                                                    {
+                                                                                        options.BaseUrl = _apiOptions.BaseAddress;
+                                                                                        options.RelativePath = $"values/{model.Id}";
+                                                                                    });
                     return RedirectToAction("Index", "Values");
                 }
                 else
@@ -162,13 +161,11 @@ namespace Pragmatic.Client.MVC.Controllers
         {
             try
             {
-                var apiResult = new ValueModel();
-                apiResult = await _downstreamApi.GetForUserAsync<ValueModel>("DownstreamApi", options =>
-                {
-                    options.BaseUrl = _apiOptions.BaseAddress;
-                    options.RelativePath = $"values/{id}";
-                });
-
+                var apiResult = await _downstreamApi.GetForUserAsync<ValueModel>("DownstreamApi", options =>
+                                                                                                {
+                                                                                                    options.BaseUrl = _apiOptions.BaseAddress;
+                                                                                                    options.RelativePath = $"values/{id}";
+                                                                                                });
                 return View(apiResult);
             }
             catch (Exception ex)
@@ -185,11 +182,11 @@ namespace Pragmatic.Client.MVC.Controllers
         {
             try
             {
-                var result = _downstreamApi.DeleteForUserAsync<ValueModel>("DownstreamApi", model, options =>
-                {
-                    options.BaseUrl = _apiOptions.BaseAddress;
-                    options.RelativePath = $"values/{id}";
-                });
+                await _downstreamApi.DeleteForUserAsync("DownstreamApi", model, options =>
+                                                                                    {
+                                                                                        options.BaseUrl = _apiOptions.BaseAddress;
+                                                                                        options.RelativePath = $"values/{id}";
+                                                                                    });
 
                 return RedirectToAction("Index", "Values");
             }
