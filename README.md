@@ -2,7 +2,7 @@
 ## Under development
 
 ### Goals:
-1. Simple example (tutorial) with steps for registering web api and clients in Azure AAD (see appsettings.json for MVC and Api)
+1. Simple example (tutorial) with steps for registering web api and multiple clients in Azure Active Directory (see appsettings.json for MVC and Api)
 2. Showing code for logging in user in web clients (see MVC client)
 3. Showing code for calling downstream web api from web clients on behalf of user (see MVC client)
 4. Showing code for calling downstream web api from console app as a daemon/application using client secret
