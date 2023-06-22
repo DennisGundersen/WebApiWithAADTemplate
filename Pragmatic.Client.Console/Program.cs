@@ -1,10 +1,1 @@
-﻿namespace Pragmatic.Client.Console
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
-    }
-}
+﻿Console.WriteLine("Setup Dependency Injection and call the Web Api using User Secret");
